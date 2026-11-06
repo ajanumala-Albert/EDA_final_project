@@ -1,0 +1,14 @@
+column,issue,n_rows,decision,why
+multiple,column selection,10000,kept 17 columns,"Kept the nine fields suggested by the project brief plus supporting fields required for provenance, duplicate analysis, missingness analysis and plausibility checks."
+all,exact duplicates,0,kept all rows,No complete duplicate rows were found in the selected dataset.
+selected fields except numero_dpe,candidate duplicates,1856,flagged and retained,"Rows match exactly across the selected descriptive fields but have different DPE identifiers. They may represent different dwellings with identical characteristics, so they were flagged but not removed."
+surface_habitable_logement,impossible values,0,kept all rows,"The minimum values were all physically or logically plausible, and the explicit row-level checks found no impossible non-missing values."
+conso_5_usages_par_m2_ep,impossible values,0,kept all rows,"The minimum values were all physically or logically plausible, and the explicit row-level checks found no impossible non-missing values."
+emission_ges_5_usages_par_m2,impossible values,0,kept all rows,"The minimum values were all physically or logically plausible, and the explicit row-level checks found no impossible non-missing values."
+nombre_niveau_logement,impossible values,0,kept all rows,"The minimum values were all physically or logically plausible, and the explicit row-level checks found no impossible non-missing values."
+nombre_niveau_logement,structural missingness,301,kept missing values; no imputation,Missingness depends on building type and DPE method. The pattern is compatible with structural missingness or MAR.
+surface_habitable_logement,structural missingness,300,kept missing values; no imputation,Missingness depends on building type and DPE method. The pattern is compatible with structural missingness or MAR.
+type_installation_chauffage,structural missingness,46,kept missing values; no imputation,Missingness depends on building type and DPE method. The pattern is compatible with structural missingness or MAR.
+conso_5_usages_par_m2_ep,isolated missing values,1,kept missing values; no imputation,"Only one value is missing, so the missingness mechanism cannot be meaningfully assessed."
+emission_ges_5_usages_par_m2,isolated missing values,1,kept missing values; no imputation,"Only one value is missing, so the missingness mechanism cannot be meaningfully assessed."
+surface_habitable_logement,IQR outliers,121,kept all rows; flagged for review,"The values were statistically unusual but plausible for the observed apartments, houses, and collective buildings. No confirmed errors were found."
