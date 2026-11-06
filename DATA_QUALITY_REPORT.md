@@ -73,6 +73,7 @@ The missing values were not imputed because the patterns are related to the DPE 
 - `surface_habitable_logement` medians for `immeuble` records are unreliable because only a few non-missing values are available.
 - Label proportions for very small construction groups, especially `après 2021` with 5 records, cannot be generalised.
 - `type_installation_chauffage` cannot be analysed within `maison` because all 46 values are missing.
+- The records cannot be assumed to represent 10,000 independent and unique dwellings. No complete duplicate rows were found, but 1,856 rows matched across the selected descriptive fields while having different `numero_dpe` values. These records were retained because they may represent distinct apartments with identical characteristics or repeated/generated DPE records. Some addresses or buildings may therefore be overrepresented.
 - The results are descriptive for a capped 10,000-record Paris snapshot and should not be treated as representative of all 862,377 matching records or as causal effects.
 
 ## 7. Hypotheses for modelling
